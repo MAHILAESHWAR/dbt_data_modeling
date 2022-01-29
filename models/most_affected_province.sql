@@ -2,9 +2,9 @@
 
 with source_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    select PROVINCE,sum(POPULATION),SUM(TOTAL_DISTRICTS),SUM(TOTAL_CITIES),SUM(TOTAL_CASES),SUM(TOTAL_ACTIVE_CASES),SUM(TOTAL_RECOVERED),SUM(TOTAL_DEATHS) from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_MAHILAESHWAR_M"
+    group by PROVINCE
+    
 
 )
 
